@@ -43,7 +43,7 @@ contract AnnotatedToken {
     return true;
   }
 
-  /// #if_succeeds {:msg "_spender will have an allowanc of _value for this sender's balance"} _allowances[owner][_spender] == _value;
+  /// #if_succeeds {:msg "_spender will have an allowance of _value for this sender's balance"} _allowances[owner][_spender] == _value;
   function approve(address _spender, uint256 _value) external returns (bool) {
     address owner = msg.sender;
     _allowances[owner][_spender] = _value;
